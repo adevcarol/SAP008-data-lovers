@@ -6,22 +6,23 @@ import data from './data/athletes/athletes.js';
 const content = document.querySelector('.cards-main');
 
 // const data2 = [data.athletes[0], data.athletes[1], data.athletes[2]]
-const arrAtletas = data.athletes
+const arrSports = data.athletes
 
-arrAtletas.forEach((element, index) => { // inicio do forEach
-    if (index <= 8) {
+arrSports.forEach((filtersport, index) => { // inicio do forEach
+    if (filtersport.sport === "Wrestling") {
         const template = `
             <div class="card-atleta" id="card-atleta">
                 <div class="atributos-atleta">
-                    <p class="nome">${element.name}</p>
-                    <p class="genero">${element.gender}</p>
+
                     <p class="esporte">${element.sport}</p>
-                    <p class="pais">${element.team}</p>
-                    <p class="medalha">${element.medal}</p>
+                    
                 </div>
             </div>
             `
         content.innerHTML += template
     }
-    console.log(arrAtletas.length)
+    console.log(filtersport.name)
+
 });
+
+
