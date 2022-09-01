@@ -42,7 +42,7 @@
     /* para tirar a borda do campo input */
     outline: 0;
     margin: 10px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Varela Round', sans-serif; 
     font-size: 30px;
 }
 
@@ -134,3 +134,5 @@
     justify-content: space-evenly;
     padding: 10px;
 }
+
+
