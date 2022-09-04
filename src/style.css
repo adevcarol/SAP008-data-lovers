@@ -73,7 +73,9 @@
     list-style: none;
 
 }
-
+.btn-dropdown{
+    display: none;
+}
 
 .submenu-modalidades {
     display: none;

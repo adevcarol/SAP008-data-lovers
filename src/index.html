@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://fontawesome.com/icons/sort-down?s=solid&f=classic"></script>
 </head>
 
 <body class="corpo">
@@ -22,7 +23,11 @@
     <nav class="barra-navegacao" id="barra-navegacao">
       <ul class="menu-principal">
         <li>
-          <a href="#" class="nav-modalidades">Modalidades &#9660;</a>
+          <label for="btn-dropdown" class="nav-modalidades">Modalidades
+           <span class="seta-baixo"> </span>
+          </label>
+          <input class="btn-dropdown" type="checkbox" id="btn-dropdown">
+          <!--<a href="#" class="nav-modalidades">Modalidades &#9660;</a> -->
           <ul class="submenu-modalidades">
             <li>
               <button>Atletismo</button>
