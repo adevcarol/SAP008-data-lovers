@@ -74,3 +74,23 @@ export const filterData = (data) => {
   content.innerHTML = cards
 };
 */
+
+
+export const sortCity = (city,order ) => {
+  if (orderPaises.value == "a-z") {
+   return city.sort (function (a,b){
+    if( a.team > b.team ){
+      return 1 
+      
+    }
+    if ( b.team > a.team) {
+      
+      return -1 
+
+    }
+   
+   } ) 
+
+  } 
+
+ }
