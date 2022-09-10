@@ -14,7 +14,6 @@ const arrayAthletes = data.athletes
 let arrayReturn = []
 
 
-
 sportSelector.onclick = (event) => {
     arrayReturn = arrayAthletes.filter(medalFilter);
     cardsPrint();
