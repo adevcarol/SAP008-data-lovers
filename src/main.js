@@ -1,3 +1,4 @@
+import { createItemFromDescriptor } from '@babel/core/lib/config/item.js';
 import { filterData } from './data.js';
 import athletes from './data/athletes/athletes.js';
 import data from './data/athletes/athletes.js';
@@ -7,10 +8,10 @@ const btnFilter = document.querySelector('#btn-filtro'); // botão de filtro
 const medalSelector = document.querySelector('#medalhas'); // imputs de medalha
 const sportSelector = document.querySelector('#modalidades');
 const atletesSelector = document.querySelector('#atletas');
+const btnfilteratletasaz = document.querySelector('#btn-filtro-atletas')
 
 const arrayAthletes = data.athletes
 let arrayReturn = []
-
 
 
 sportSelector.onclick = (event) => {
@@ -35,3 +36,4 @@ function medalFilter(atleta) {
 function cardsPrint() {
     content.innerHTML = filterData(arrayReturn);
 }
+
