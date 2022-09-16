@@ -1,4 +1,4 @@
-import { computeStats, filterData, filterMedal, ascendingOrder, descendingOrder } from './data.js';
+import { computeStats, filterData, filterMedal, ascendingOrder, descendingOrder, userSearch} from './data.js';
 import data from './data/athletes/athletes.js';
 
 const content = document.querySelector('#cards-main'); // impressão dos cards
@@ -89,7 +89,7 @@ orderSelector.onchange = () => {
     }
 }
 
-inptSearch.onkeyup = function () {
+/*inptSearch.onkeyup = function () {
     let input = inptSearch.value
     input = input.toLowerCase();
     let element = document.getElementsByClassName('nome');
@@ -102,5 +102,11 @@ inptSearch.onkeyup = function () {
             element[i].style.display = "list-item";
         }
     }
-};
+};*/
 
+function agoraVai(){
+    let filtrado = userSearch(arrayAthletes, inptSearch.value)
+    content.innerHTML = createCards(filtrado)
+}
+
+inptSearch.addEventListener("keypress", agoraVai)
