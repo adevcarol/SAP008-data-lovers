@@ -60,9 +60,9 @@ function selectInfo(data, key) {
             <option value="${element[key]}">${element[key]}</option>
             `
     });
-    //const x = new Set(item)
-    //const y = [...x]
-    return item.join(""); // ...new Set para remover itens repedidos do array mas dá erro nos testes
+    const noRepeat = new Set(item)
+    const select = [...noRepeat]
+    return select.join(""); // ...new Set para remover itens repedidos do array
 }
 
 teamSelector.onchange = () => {

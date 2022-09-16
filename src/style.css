@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-/*
-@media screen and (max-width: 1300px) {
-    .corpo {
-        width: 900px 
-    }
-}
-*/
-
 @font-face {
     font-family: RIO2016;
     src: url(fonts/RIO2016.ttf);
@@ -242,7 +234,8 @@ ul li button:hover {
     font-size: 20px;
 }
 
-.titulo-origem, .curiosidades {
+.titulo-origem,
+.curiosidades {
     font-family: RIO2016;
     text-align: center;
     line-height: 2cm;
@@ -250,7 +243,8 @@ ul li button:hover {
     color: #2381C8;
 }
 
-.historia-olimpiadas, .pag-curiosidades{
+.historia-olimpiadas,
+.pag-curiosidades {
     font-family: 'Varela Round', sans-serif;
     text-align: justify;
     padding: 5mm;
@@ -314,7 +308,11 @@ ul li button:hover {
 }
 
 
-.titulo-rio, .titulo-tocha-rio, .tocha-olimpica, .titulo-campeão1, .titulo-campeã2{
+.titulo-rio,
+.titulo-tocha-rio,
+.tocha-olimpica,
+.titulo-campeão1,
+.titulo-campeã2 {
     font-family: RIO2016;
     text-align: center;
     line-height: 2cm;
@@ -334,27 +332,30 @@ ul li button:hover {
 .img-abertura,
 .tabela-medalhas,
 .img-modalidades,
-.slider-content{
+.slider-content {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 50px 0px;
 
 }
-.tocha-conceito{
+
+.tocha-conceito {
     display: flex;
     justify-content: center;
 
 }
 
-.img-tocha img, .img-abertura img, .slider-content img {
+.img-tocha img,
+.img-abertura img,
+.slider-content img {
     width: 300px;
     height: 200px;
     overflow: hidden;
     border: 0px;
 }
 
-.tocha-conceito img{
+.tocha-conceito img {
     width: 400px;
     height: 500px;
     overflow: hidden;
@@ -368,7 +369,7 @@ ul li button:hover {
 .abertura2 img,
 .abertura3 img,
 .tocha-conceito img,
-.slider-item img{
+.slider-item img {
     -webkit-transition: -webkit-transform .5s ease;
     transition: transform .5s ease;
 }
@@ -378,10 +379,9 @@ ul li button:hover {
 .img-tocha-3:hover img,
 .abertura1:hover img,
 .abertura2:hover img,
-.abertura3:hover img 
-.abertura3:hover img,
+.abertura3:hover img .abertura3:hover img,
 .tocha-conceito:hover img,
-.slider-item:hover img{
+.slider-item:hover img {
     -webkit-transform: scale(1.8);
     transform: scale(1.8);
 }
@@ -470,8 +470,6 @@ ul li button:hover {
     transform-style: preserve-3d;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-
-
 }
 
 .card-frente {
@@ -611,35 +609,111 @@ strong {
     height: 320px;
 }
 
-.tabela-de-medalhas-charlotte-cooper1{
+.tabela-de-medalhas-charlotte-cooper1 {
     width: 25cm;
     height: 10cm;
-    
+
 }
 
-.tabela-de-medalhas-charlotte-cooper2{
+.tabela-de-medalhas-charlotte-cooper2 {
     width: 25cm;
-    height: 3,5cm;
-    
+    height: 3, 5cm;
+
 }
-.charlotte-cooper, .tabela-primeiro-pais-vencedor{
+
+.charlotte-cooper,
+.tabela-primeiro-pais-vencedor {
     display: flex;
     justify-content: center;
 
 }
-.charlotte-cooper img{
+
+.charlotte-cooper img {
     width: 600px;
     height: 400px;
 }
-.charlotte{
+
+.charlotte {
     font-weight: bold;
 }
-.james-connolly-primeiro-campeão-olímpico{
+
+.james-connolly-primeiro-campeão-olímpico {
     display: flex;
     justify-content: center;
 }
-.james-connolly-primeiro-campeão-olímpico img{
+
+.james-connolly-primeiro-campeão-olímpico img {
     width: 600px;
     height: 400px;
 }
 
+#check {
+    display: none;
+}
+
+.menu-resposivo {
+    display: none;
+}
+
+@media (max-width: 412px) {
+    .lista-navegacao {
+        display: none;
+    }
+
+    .campo-pesquisar-e-botao {
+        width: 220px;
+    }
+
+    .menu-resposivo {
+        display: block;
+    }
+
+    .menu-resposivo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lista-navegacao {
+        background-color: #b6b6b6;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        transition: all 0.5s;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #check:checked~.lista-navegacao {
+        right: 0%;
+    }
+
+    .lista-navegacao a {
+        padding: 3px;
+    }
+
+    .lista-navegacao a:hover {
+        background-color: #919191;
+    }
+
+    .estatistica {
+        height: 70px;
+    }
+
+    .inputs-de-filtro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cx-etiqueta {
+        font-size: 18px;
+    }
+
+    .cx-filtro {
+        margin: -30px 0 25px 0;
+    }
+}
