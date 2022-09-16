@@ -51,8 +51,10 @@ export const descendingOrder = (data) => {
   return order;
 }
 
-/*----------------BARRA DE PESQUISA------------------------
+//----------------BARRA DE PESQUISA------------------------
 export const userSearch = (data, condition) => {
-  // ..
+ let test = data.filter(atleta =>atleta.name.toLowerCase().includes(condition.toLowerCase()))
+  return test
 }
-*/
+
+

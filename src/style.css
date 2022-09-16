@@ -379,7 +379,7 @@ ul li button:hover {
 .img-tocha-3:hover img,
 .abertura1:hover img,
 .abertura2:hover img,
-.abertura3:hover img .abertura3:hover img,
+.abertura3:hover img,
 .tocha-conceito:hover img,
 .slider-item:hover img {
     -webkit-transform: scale(1.8);
