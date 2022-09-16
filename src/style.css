@@ -3,11 +3,13 @@
     padding: 0;
 }
 
+/*
 @media screen and (max-width: 1300px) {
     .corpo {
-        /* width: 900px */
+        width: 900px 
     }
 }
+*/
 
 @font-face {
     font-family: RIO2016;
@@ -195,11 +197,11 @@ ul li button:hover {
 /* Estilização da main */
 .conteudo-principal {
     background-color: #fff;
-    margin: 50px;
+    margin: 100px;
     width: 90%;
     height: 90%;
     border-radius: 20px;
-    padding: 20px;
+    padding: 50px 130px 130px 130px;
 }
 
 .calculo-agregado {
@@ -240,7 +242,7 @@ ul li button:hover {
     font-size: 20px;
 }
 
-.titulo-origem {
+.titulo-origem, .curiosidades {
     font-family: RIO2016;
     text-align: center;
     line-height: 2cm;
@@ -248,7 +250,7 @@ ul li button:hover {
     color: #2381C8;
 }
 
-.historia-olimpiadas {
+.historia-olimpiadas, .pag-curiosidades{
     font-family: 'Varela Round', sans-serif;
     text-align: justify;
     padding: 5mm;
@@ -312,7 +314,7 @@ ul li button:hover {
 }
 
 
-.titulo-rio {
+.titulo-rio, .titulo-tocha-rio, .tocha-olimpica, .titulo-campeão1, .titulo-campeã2{
     font-family: RIO2016;
     text-align: center;
     line-height: 2cm;
@@ -331,18 +333,30 @@ ul li button:hover {
 .img-tocha,
 .img-abertura,
 .tabela-medalhas,
-.img-modalidades {
+.img-modalidades,
+.slider-content{
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 50px 0px;
 
 }
+.tocha-conceito{
+    display: flex;
+    justify-content: center;
 
-.img-tocha img,
-.img-abertura img {
+}
+
+.img-tocha img, .img-abertura img, .slider-content img {
     width: 300px;
     height: 200px;
+    overflow: hidden;
+    border: 0px;
+}
+
+.tocha-conceito img{
+    width: 400px;
+    height: 500px;
     overflow: hidden;
     border: 0px;
 }
@@ -352,7 +366,9 @@ ul li button:hover {
 .img-tocha-3 img,
 .abertura1 img,
 .abertura2 img,
-.abertura3 img {
+.abertura3 img,
+.tocha-conceito img,
+.slider-item img{
     -webkit-transition: -webkit-transform .5s ease;
     transition: transform .5s ease;
 }
@@ -362,11 +378,13 @@ ul li button:hover {
 .img-tocha-3:hover img,
 .abertura1:hover img,
 .abertura2:hover img,
-.abertura3:hover img {
+.abertura3:hover img 
+.abertura3:hover img,
+.tocha-conceito:hover img,
+.slider-item:hover img{
     -webkit-transform: scale(1.8);
     transform: scale(1.8);
 }
-
 
 .texto-logo {
     display: flex;
@@ -592,3 +610,36 @@ strong {
     width: 200px;
     height: 320px;
 }
+
+.tabela-de-medalhas-charlotte-cooper1{
+    width: 25cm;
+    height: 10cm;
+    
+}
+
+.tabela-de-medalhas-charlotte-cooper2{
+    width: 25cm;
+    height: 3,5cm;
+    
+}
+.charlotte-cooper, .tabela-primeiro-pais-vencedor{
+    display: flex;
+    justify-content: center;
+
+}
+.charlotte-cooper img{
+    width: 600px;
+    height: 400px;
+}
+.charlotte{
+    font-weight: bold;
+}
+.james-connolly-primeiro-campeão-olímpico{
+    display: flex;
+    justify-content: center;
+}
+.james-connolly-primeiro-campeão-olímpico img{
+    width: 600px;
+    height: 400px;
+}
+
