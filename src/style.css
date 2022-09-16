@@ -3,11 +3,13 @@
     padding: 0;
 }
 
+/*
 @media screen and (max-width: 1300px) {
     .corpo {
-        /* width: 900px */
+        width: 900px 
     }
 }
+*/
 
 @font-face {
     font-family: RIO2016;
@@ -202,7 +204,7 @@ ul li button:hover {
     padding: 50px 130px 130px 130px;
 }
 
-.calculo-agregado{
+.calculo-agregado {
     display: flex;
     justify-content: center;
 }
@@ -220,14 +222,14 @@ ul li button:hover {
     margin: 20px;
 }
 
-.estatistica strong{
+.estatistica strong {
     color: #fff;
 }
 
-.cx-filtro{
+.cx-filtro {
     width: 100px;
     height: 25px;
-    border:  1px rgb(197, 196, 196) solid;
+    border: 1px rgb(197, 196, 196) solid;
     border-radius: 5px;
     outline: 0;
     font-family: 'Varela Round', sans-serif;
@@ -235,7 +237,7 @@ ul li button:hover {
     list-style: none;
 }
 
-.cx-etiqueta{
+.cx-etiqueta {
     font-family: 'Varela Round', sans-serif;
     font-size: 20px;
 }
@@ -261,11 +263,11 @@ ul li button:hover {
     height: 250px;
 }
 
-.slider{
+.slider {
     overflow: hidden;
 }
 
-.slider > .slider-content{
+.slider>.slider-content {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -273,31 +275,32 @@ ul li button:hover {
 
 }
 
-.slider > .slider-content > .slider-item {
+.slider>.slider-content>.slider-item {
     flex: 0 0 auto;
     width: 100%;
 }
 
-.slider > input:nth-child(1):checked ~ .slider-content{
+.slider>input:nth-child(1):checked~.slider-content {
     transform: translateX(0%);
 }
 
-.slider > input:nth-child(2):checked ~ .slider-content{
+.slider>input:nth-child(2):checked~.slider-content {
     transform: translateX(-100%);
 }
-.slider > input:nth-child(3):checked ~ .slider-content{
+
+.slider>input:nth-child(3):checked~.slider-content {
     transform: translateX(-200%);
 }
 
-.slider > input:nth-child(4):checked ~ .slider-content{
+.slider>input:nth-child(4):checked~.slider-content {
     transform: translateX(-300%);
 }
 
-.slider > input:nth-child(5):checked ~ .slider-content{
+.slider>input:nth-child(5):checked~.slider-content {
     transform: translateX(-400%);
 }
 
-.slider > input:nth-child(6):checked ~ .slider-content{
+.slider>input:nth-child(6):checked~.slider-content {
     transform: translateX(-500%);
 }
 
@@ -350,6 +353,7 @@ ul li button:hover {
     overflow: hidden;
     border: 0px;
 }
+
 .tocha-conceito img{
     width: 400px;
     height: 500px;
@@ -374,13 +378,13 @@ ul li button:hover {
 .img-tocha-3:hover img,
 .abertura1:hover img,
 .abertura2:hover img,
+.abertura3:hover img 
 .abertura3:hover img,
 .tocha-conceito:hover img,
 .slider-item:hover img{
     -webkit-transform: scale(1.8);
     transform: scale(1.8);
 }
-
 
 .texto-logo {
     display: flex;
@@ -538,6 +542,73 @@ strong {
 
 .nome {
     list-style: none;
+}
+
+.corpo-iniciar {
+    background-image: url(./img/iniciar-bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mascote-tom {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mascote-tom img {
+    width: 180px;
+    height: 300px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.middle img {
+    width: 340px;
+    height: 160px;
+}
+
+.middle a {
+    text-decoration: none;
+    font-family: RIO2016;
+    font-size: 30px;
+    color: #fff;
+    background-color: #2C89C5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.middle a:hover {
+    background-color: #2381C8;
+}
+
+.mascote-vinicius {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mascote-vinicius img {
+    width: 200px;
+    height: 320px;
 }
 
 .tabela-de-medalhas-charlotte-cooper1{

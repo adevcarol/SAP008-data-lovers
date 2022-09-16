@@ -1,4 +1,4 @@
-import { filterData, ascendingOrder, descendingOrder } from '../src/data.js';
+import { filterData, descendingOrder, ascendingOrder, computeStats } from '../src/data.js';
 
 const arrayTest = [
   {
@@ -63,14 +63,54 @@ describe('filterData', () => {
   })
 });
 
+describe('descendingOrder', () => {
+  it('é uma função', () => {
+    expect(typeof descendingOrder).toBe('function');
+  });
+
+  it('ordenar de z-a', () => { // não está retornando o esperado ainda
+    const ordemEsperada = descendingOrder(arrayTest);
+    expect(ordemEsperada.length).toEqual(4);
+    expect(ordemEsperada).toEqual([
+      arrayTest[0],
+      arrayTest[1],
+      arrayTest[2],
+      arrayTest[3]
+    ]);
+  })
+});
+
 describe('ascendingOrder', () => {
   it('é uma função', () => {
     expect(typeof ascendingOrder).toBe('function');
   });
 
-  it('ordenar de z-a', () => {
-    const ordemEsperada = descendingOrder(arrayTest, 'Z-A');
+  it('ordenar de a-z', () => { // não está retornando o esperado
+    const ordemEsperada = ascendingOrder(arrayTest);
     expect(ordemEsperada.length).toEqual(4);
-    expect(ordemEsperada).toEqual([arrayTest[3], arrayTest[1], arrayTest[2], arrayTest[0]]);
+    expect(ordemEsperada).toEqual([
+      arrayTest[0],
+      arrayTest[1],
+      arrayTest[2],
+      arrayTest[3]
+    ]);
+  })
+});
+
+describe('computeStats', () => {
+  it('é uma função', () => {
+    expect(typeof computeStats).toBe('function');
+  })
+  it('porcentagem de medalhistas mulheres', () => {
+    const porcentagemEsperada = computeStats(arrayTest, "gender", "F")
+    expect(porcentagemEsperada).toEqual(25);
+  })
+  it('porcentagem de medalhistas brasileiros', () => {
+    const porcentagemEsperada = computeStats(arrayTest, "medal", "Brazil")
+    expect(porcentagemEsperada).toEqual(0);
+  })
+  it('porcentagem de medalhistas de bronze', () => {
+    const porcentagemEsperada = computeStats(arrayTest, "medal", "Bronze")
+    expect(porcentagemEsperada).toEqual(50);
   })
 });
