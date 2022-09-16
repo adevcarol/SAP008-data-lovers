@@ -34,7 +34,7 @@ export const ascendingOrder = (data) => {
       return -1;
     }
   })
-  console.log(order)
+  //console.log(order)
   return order;
 }
 
@@ -47,7 +47,7 @@ export const descendingOrder = (data) => {
       return 1;
     }
   })
-  console.log(order)
+  //console.log(order)
   return order;
 }
 
