@@ -36,7 +36,7 @@ Inicíamos o projeto com uma pesquisa histórica, sobre o início das olimpíada
 
 Pensamos em uma aplicação intuitiva, rápida e prática, que englobasse informações históricas e atuais, sobre o contexto dos jogos. Conteúdos sobre os atletas, modalidades, países paricipantes e curiosidades. 
 
-Desde as estapas iniciais, priorizamos tornar a aplicação acessível para todos os usuários.
+Desde as estapas iniciais, priorizamos tornar a aplicação acessível para todos os usuários:
 
 * Fontes grandes e legíveis;
 * Efeito de Zoom nas imagens;
@@ -80,7 +80,15 @@ A partir dele, verificamos a necessidade de reforçar a acessibilidade, o posici
 <br>
 <p align="center"> <img src="./src/img/figma3.png" width="600">
 </p>
-<div  align="center">Versão Mobile</div><br>
+<div  align="center">Mesa do Figma</div><br>
+
+### Fluxograma
+Visando entender a melhor forma de resposta da aplicação e o fluxo do usuario, optamos por criar um Fuxograma, que segue abaixo:
+
+<br>
+<p align="center"> <img src="./src/img/fluxograma-data-lovers.drawio.png" width="600">
+</p>
+<div  align="center">Fluxograma</div><br>
 
 
 ##  6. Demonstração da Aplicação: 
@@ -92,6 +100,38 @@ Por meio de gif segue a demonstração da usabilidade da nossa aplicação.
 
 ##  7. Considerações Técnicas e Execução: 
 
+### HTML 
+Na linguagem HTML, priorizamos o uso do HTML Semãntico para a estrutura base da página, com o uso de classes e id's, para a identificação rápida e intuitiva, colabaorando com o uso das mesmas no CSS e JavaScript.
+
+### CSS
+Para o CSS, gostariamos de destacar o uso do FLEX BOX; que foi utilizado praticamente em todos os seletodes que continham mais de um elemento.
+
+### JavaScript
+A partir da manipulação do DOM, conseguimos trazer para nosso JavaScript os dados necessários para tratarmos ao longo do código, tanto os elementos de entrada (inputs e banco de dados - API), quanto elementos de saída (template string).
+
+Os métodos de Array utilizados neste projeto englobaram:
+
+* <b>.filter():</b> cria uma novo array, preenchido com os elementos que satisfazem uma condição expecificada;
+* <b>.map():</b> cria um novo array, aplicando alguma mudança que altera cada um dos elementos;
+* <b>.reduce():</b> ele itera por cada elemento da lista, com o objetivo de ao final gerar um único valor;
+* <b>.sort():</b> ele ordena os elementos do próprio array e retorna o array ordenado;
+* <b>.join():</b> ele une todos os elementos de um array em uma string e retorna esta string.
+
+Para a manipulação dos obejetos, em nossas funções utilizamos as Keys e Values recebidos pelo nossos parâmetros.
+
+O <strong>objetivo do Teste Unitário</strong> foi assegurar que cada unidade esteja funcionando de acordo com sua expecificação funcional. Estes tipos de <strong>testes</strong> são frequentemente escritos quando se trabalha no código para segurar que a função expecifica está executando como o esperado.   
+
+
+<br>
+<p align="center"> <img src="./src/img/teste-unitario.png" width="600">
+</p>
+<div  align="center">Parte do Teste Unitário</div><br>
 
 
 ##  8. Autoras: 
+
+<br>
+<div  align="center">
+
+<img src="./src/img/autoras.png" width="400">
+</div>
