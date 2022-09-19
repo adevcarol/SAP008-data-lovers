@@ -1,8 +1,8 @@
 import { computeStats, filterData, filterMedal, ascendingOrder, descendingOrder, userSearch} from './data.js';
 import data from './data/athletes/athletes.js';
 
-const content = document.querySelector('#cards-main'); // impressão dos cards
-const medalSelector = document.querySelector('#medalhas'); // imputs de medalha
+const content = document.querySelector('#cards-main'); 
+const medalSelector = document.querySelector('#medalhas'); 
 const sportSelector = document.querySelector('#modalidades');
 const orderSelector = document.querySelector('#ordenacao');
 const statistic = document.querySelector('#calculo-agregado');
@@ -10,7 +10,6 @@ const inptSearch = document.querySelector('#barra-pesquisar');
 
 const arrayAthletes = data.athletes;
 
-// geração dos cards
 function createCards(data) {
     const cards = data.map(createCardElement).join("")
     return cards;
@@ -54,7 +53,6 @@ function createCardStats(element) {
             `
 }
 
-/* ----------------SELECT DAS MODALIDADES--------------------*/
 function selectInfo(data, key) {
     const item = data.map((element) => {
         return `
@@ -63,7 +61,7 @@ function selectInfo(data, key) {
     });
     const noRepeat = new Set(item)
     const select = [...noRepeat]
-    return select.join(""); // ...new Set para remover itens repedidos do array
+    return select.join("");
 }
 
 sportSelector.onchange = () => {
@@ -89,24 +87,9 @@ orderSelector.onchange = () => {
     }
 }
 
-/*inptSearch.onkeyup = function () {
-    let input = inptSearch.value
-    input = input.toLowerCase();
-    let element = document.getElementsByClassName('nome');
-
-    for (let i = 0; i < element.length; i++) {
-        if (!element[i].innerHTML.toLowerCase().includes(input)) {
-            element[i].style.display = "none";
-        }
-        else {
-            element[i].style.display = "list-item";
-        }
-    }
-};*/
-
-function agoraVai(){
+function searchInfo(){
     let filtrado = userSearch(arrayAthletes, inptSearch.value)
     content.innerHTML = createCards(filtrado)
 }
 
-inptSearch.addEventListener("keypress", agoraVai)
+inptSearch.addEventListener("keypress", searchInfo)
