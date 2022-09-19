@@ -68,7 +68,7 @@ describe('descendingOrder', () => {
     expect(typeof descendingOrder).toBe('function');
   });
 
-  it('ordenar de z-a', () => { // não está retornando o esperado ainda
+  it('ordenar de z-a', () => {
     console.log(arrayTest);
     const ordemEsperada = descendingOrder(arrayTest);
     expect(ordemEsperada.length).toEqual(4);
@@ -87,7 +87,7 @@ describe('ascendingOrder', () => {
     expect(typeof ascendingOrder).toBe('function');
   });
 
-  it('ordenar de a-z', () => { // não está retornando o esperado
+  it('ordenar de a-z', () => {
     const ordemEsperada = ascendingOrder(arrayTest);
     expect(ordemEsperada.length).toEqual(4);
     expect(ordemEsperada).toEqual([
