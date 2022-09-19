@@ -69,7 +69,6 @@ describe('descendingOrder', () => {
   });
 
   it('ordenar de z-a', () => {
-    console.log(arrayTest);
     const ordemEsperada = descendingOrder(arrayTest);
     expect(ordemEsperada.length).toEqual(4);
     expect(ordemEsperada).toEqual([
@@ -78,7 +77,6 @@ describe('descendingOrder', () => {
       arrayTest[2],
       arrayTest[3],
     ]);
-    console.log(arrayTest)
   })
 });
 
